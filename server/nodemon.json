@@ -1,0 +1,9 @@
+{
+    "env":{
+        "MONGO_PASSWORD":"QTYfAmo4XWg7MbWv",
+        "JWT_KEY":"secretKey",
+        "CLOUD_NAME":"dqetkgwrr",
+        "CLOUDINARY_API_KEY":"849841626138261",
+        "CLOUDINARY_API_SECRET":"KSexjtaR5wXGo6fFM0lCmL2mLkA"
+    }
+}   
