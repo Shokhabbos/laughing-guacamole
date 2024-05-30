@@ -1,0 +1,29 @@
+.custom-checkbox {
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+.custom-checkbox-minus {
+  background-image: url("../../assets/images/minus.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-appearance: none;
+  appearance: none;
+  border: 1px solid #000;
+  background-color: #fff;
+  width: 20px;
+  height: 20px;
+}
+.custom-checkbox:checked {
+  background-image: url("../../assets/images/checked.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.collection-table-description {
+  width: 800px;
+}

@@ -1,0 +1,43 @@
+.dashboard-menu-wrapper {
+  padding: 20px;
+}
+.dashboard-menu-wrapper a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 0 10px;
+  color: #000;
+}
+.dashboard-menu-wrapper a:hover {
+  background-color: #d8d7d7;
+  padding: 10px;
+  border-radius: 10px;
+}
+.dashboard-wrapper {
+  padding: 30px;
+}
+.actions-wrapper a {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+.actions-wrapper button {
+  border: none;
+  border-radius: 5px;
+  padding: 6px 12px;
+  color: #fff;
+  margin-right: 8px;
+  margin-bottom: 20px;
+  font-size: 18px;
+  background-color: red;
+  cursor: pointer;
+}
+.actions-wrapper a:first-child {
+  background-color: #2962ff;
+}
+.actions-wrapper a:nth-child(2) {
+  background-color: rgb(255, 242, 0);
+}

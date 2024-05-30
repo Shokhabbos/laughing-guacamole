@@ -1,0 +1,46 @@
+.actions-wrapper {
+    padding: 40px 0px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .lock-icon {
+    font-size: 22px;
+  }
+  .unlock-icon {
+    font-size: 22px;
+    color: #000;
+  }
+  .custom-hover {
+    padding: 7.5px 10px !important;
+  }
+  .custom-hover:hover {
+    background-color: #5a9bdc75 !important;
+  }
+  .custom-checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  .custom-checkbox-minus {
+    background-image: url("../../assets/images/minus.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 1px solid #000;
+    background-color: #fff;
+    width: 20px;
+    height: 20px;
+  }
+  .custom-checkbox:checked {
+    background-image: url("../../assets/images/checked.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
