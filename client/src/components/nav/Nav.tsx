@@ -40,8 +40,8 @@ const Nav:React.FC<navProps> = ({setSearch,search}) => {
                     userState ? <Dropdown>
                     <MenuButton className="dashboard-title"><Avatar src="/broken-image.jpg" /></MenuButton>
                     <Menu>
-                      <MenuItem><Link to='/dashboard'>My account</Link></MenuItem>
-                      <MenuItem onClick={() => dispatch(logOut())}>Logout</MenuItem>
+                      <MenuItem><Link to='/dashboard'>{t('My-account')}</Link></MenuItem>
+                      <MenuItem onClick={() => dispatch(logOut())}>{t('log-out')}</MenuItem>
                     </Menu>
                   </Dropdown> : <Link to='/signIn'>{t('nav-login')}</Link>
                   }

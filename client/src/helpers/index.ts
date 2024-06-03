@@ -1,22 +1,21 @@
-const validateToken = (token: any) => {
+const validateToken = (token: string): boolean => {
   const payload = token.split(".")[1];
   if (payload) {
     try {
-      const exp = JSON.parse(atob(payload)).exp;
+      const decodedPayload = JSON.parse(atob(payload));
+      const exp = decodedPayload.exp;
       const now = new Date().getTime() / 1000;
       if (exp > now) {
         return true;
+      } else {
+        console.error("Token has expired.");
       }
-      localStorage.removeItem("token");
-      return false;
     } catch (error) {
-      localStorage.removeItem("token");
-      return false;
+      console.error("Error parsing token payload:", error);
     }
-  } else {
-    localStorage.removeItem("token");
-    return false;
   }
+  localStorage.removeItem("token");
+  return false;
 };
 
 export { validateToken };
