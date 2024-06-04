@@ -66,6 +66,7 @@ export default function ItemsTable({ items, itemIds, setItemIds } : { items: any
           </TableHead>
           <TableBody>
             {items.map((row) => (
+
               <StyledTableRow key={row._id}>
                 <StyledTableCell component="th" scope="row">
                   <input

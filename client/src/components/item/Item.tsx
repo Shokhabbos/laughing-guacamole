@@ -6,7 +6,7 @@ const ItemC = ({item}:{item:Item}) => {
   const { t } = useTranslation()
   return (
     <div className="collection-wrapper" key={item._id}>
-      <img width={400} height={350} src={item.image} alt="" />
+      <img  className="item-image" src={item.image} alt="" />
       <div className="collection-info">
         <Link to={`/singleItem/${item._id}`}>View item</Link>
       </div>

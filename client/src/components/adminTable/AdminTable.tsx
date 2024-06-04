@@ -84,7 +84,7 @@ export default function AdminTable({ collections, collectionIds, setCollectionId
                     onChange={() => handleCheckboxChange(row._id)}
                   />
                 </StyledTableCell>
-                <StyledTableCell align="left"><Link to={`/admin-single-col/${row.name}`}>{row.name}</Link></StyledTableCell>
+                <StyledTableCell align="left"><Link to={`/singleItem/${row.name}`}>{row.name}</Link></StyledTableCell>
                 <StyledTableCell align="left">{row.topic}</StyledTableCell>
                 <StyledTableCell align="left">{row.items.length}</StyledTableCell>
                 <StyledTableCell className='collection-table-description' align="left">{row.discreption}</StyledTableCell>

@@ -8,7 +8,7 @@ const CollectionC = ({collection}:{collection:Collection}) => {
   return (
     <div className="collections-all-wrapper">
       <div className="collection-wrapper" key={collection._id}>
-        <img className="item-image" width={400} height={300} src={collection.image} alt="" />
+        <img className="item-image"  src={collection.image} alt="" />
         <div className="collection-info">
           <Link to={`/singleCol/${collection._id}`}>View collection</Link>
         </div>

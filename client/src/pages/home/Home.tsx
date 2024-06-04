@@ -73,8 +73,8 @@ const Home:React.FC<HomeProps> = ({setSearch,search}) => {
             <div className="search-section-title">{t('Comments')}</div>
             <div className="search-result-wrapper">
               {keyResult && keyResult.comments.length > 0 ? (
-                keyResult.comments.map((el: Comment) => (
-                  <div>
+                keyResult.comments.map((el: Comment, uniqueId:number) => (
+                  <div key={uniqueId}>
                     <p>{t('Comment')} "{el.text}" {t('at-this')} <Link className="item_link" to={`/singleItem/${el.item_id}`}>Item</Link></p>
                   </div>  
                 ))
@@ -96,6 +96,7 @@ const Home:React.FC<HomeProps> = ({setSearch,search}) => {
                   return <CollectionC key={collection._id} collection={collection}/>
                 })
               }
+
             </div>
             <div className="section-title">
             <h3 className="collection-title">{t('item-title')}</h3>
