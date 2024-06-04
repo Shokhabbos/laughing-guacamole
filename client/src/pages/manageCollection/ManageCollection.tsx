@@ -69,7 +69,7 @@ const ManageCollection = () => {
   useEffect(() => {
     if (type === 'edit' && collection) {
       setImage(collection.image);
-      setDescription(collection.description);
+      setDescription(collection.discreption);
       setName(collection.name);
       setTopic(collection.topic);
     }
