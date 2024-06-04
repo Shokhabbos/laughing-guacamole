@@ -51,5 +51,7 @@
   "promoteAdmin" : "Adminga ko'tarish",
   "deleteAdmin" : "Admindan olish",
   "role" : "Lavozim" ,
-  "status" : "Holat"
+  "status" : "Holat",
+  "view-item": "Cardni ko'rish",
+  "no-comments": "komment xali yoq"
 }

@@ -92,7 +92,7 @@ const SingleItem = () => {
                     </div>
                     <p className='user-comment'>{comment.text}</p>
                   </div> 
-                }) : <p>No Comments</p>
+                }) : <p>{t("no-comments")}</p>
               }
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import './ManageCollection.scss';
 import AdminNav from '../../components/adminNav/AdminNav';
 import { useEffect, useState } from 'react';
@@ -14,7 +14,8 @@ import { useTranslation } from 'react-i18next';
 
 const ManageCollection = () => {
   const { type, id } = useParams<{ type: string; id: string }>();
-  const [image, setImage] = useState<File | null | any>(null);
+  const navigate = useNavigate();
+  const [image, setImage] = useState<File | null | string>(null);
   const [name, setName] = useState<string>('');
   const [description, setDescription] = useState<string>('');
   const [topic, setTopic] = useState<string>('');
@@ -31,13 +32,15 @@ const ManageCollection = () => {
     }
   };
 
-  const createCol = (formData: FormData) => {
-    dispatch(createCollection(formData));
+  const createCol = async (formData: FormData) => {
+    await dispatch(createCollection(formData));
+    navigate('/'); // Redirect to home after creating the collection
   };
 
-  const updateCol = (formData: FormData) => {
+  const updateCol = async (formData: FormData) => {
     if (id) {
-      dispatch(updateCollection([formData, id]));
+      await dispatch(updateCollection([formData, id]));
+      navigate('/'); // Redirect to home after updating the collection
     }
   };
 
@@ -82,7 +85,7 @@ const ManageCollection = () => {
     e.preventDefault();
     const formData = new FormData();
     formData.append('name', name);
-    formData.append('image', image);
+    formData.append('image', image as File);
     formData.append('description', description);
     formData.append('topic', topic);
     formData.append('user_id', user._id as string);
@@ -103,9 +106,9 @@ const ManageCollection = () => {
             <form className='create-content-wrapper' onSubmit={handleSubmit}>
               <div className="img-input">
                 {type === 'create' ? (
-                  <img width={500} height={400} src={image ? URL.createObjectURL(image) : defImage} alt="" />
+                  <img width={500} height={400} src={image ? URL.createObjectURL(image as File) : defImage} alt="" />
                 ) : (
-                  <img width={500} height={400} src={image} alt="" />
+                  <img width={500} height={400} src={image as string} alt="" />
                 )}
                 <input type="file" onChange={handleImageChange} />
               </div>

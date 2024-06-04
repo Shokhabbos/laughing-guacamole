@@ -8,7 +8,7 @@ const ItemC = ({item}:{item:Item}) => {
     <div className="collection-wrapper" key={item._id}>
       <img  className="item-image" src={item.image} alt="" />
       <div className="collection-info">
-        <Link to={`/singleItem/${item._id}`}>View item</Link>
+        <Link to={`/singleItem/${item._id}`}>{t("view-item")}</Link>
       </div>
       <div className="collection-info-wrapper">
         <p>{item.name}</p>

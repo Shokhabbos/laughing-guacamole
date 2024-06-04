@@ -20,7 +20,7 @@ export default function LangSwitcher() {
   },[age])
   return (
     <FormControl sx={{ m: 1, minWidth: 120 }} size="small">
-      <InputLabel id="demo-select-small-label">{t('nav-language')}</InputLabel>
+      <InputLabel sx={{ marginLeft: '0px' }} id="demo-select-small-label">{t('nav-language')}</InputLabel>
       <Select
         labelId="demo-select-small-label"
         id="demo-select-small"

@@ -51,5 +51,7 @@
   "promoteAdmin" : "Promote to admin" ,
   "deleteAdmin" : "Remove from admin" ,
   "role" : "Role",
-  "status" : "Status"
+  "status" : "Status",
+  "view-item": "View Item",
+  "no-comments": "No comments"
 }
